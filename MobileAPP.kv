@@ -1,0 +1,125 @@
+ #:kivy 2.1.0
+<Button>:
+    font_size: 50
+    background_normal:''
+    background_color: (255/255, 220/255, 41/255, 1)
+    #color:(255/255, 220/255, 41/255, 1)
+    outline_color: (255,255,255)
+    outline_width: 2
+    
+ 
+
+<MobileAPP>:
+
+    BoxLayout:
+        orientation:'vertical'
+        size: root.width, root.height
+       
+        BoxLayout:
+            orientation:'vertical'
+            padding: 5
+            Image:
+                source: 'Count.png'
+                allow_stretch: True
+                keep_ratio: False
+                
+            
+        GridLayout:
+            cols: 3
+            spacing: 10
+            padding: 10
+
+            Button:
+                id: add_item1
+                text:'+'
+                on_press: root.add1()
+                
+            Label:
+                id: Item1
+                text:'0'
+                font_size: 50
+                background_color: (255, 255, 255, 0.2)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color:(0, 1, 0, 1)
+                bold: True
+                outline_color: (255,255,255)
+                outline_width: 2
+                
+            
+            Button:
+                id: sub_item1
+                text:'-'
+                on_press: root.sub1()
+
+            Button:
+                id: add_item2
+                text:'+'
+                on_press: root.add2()
+
+            Label:
+                id: Item2
+                text: '0'
+                font_size: 50
+                background_color: (255, 255, 255, 0.2)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color:(0, 1, 0, 1)
+                bold: True
+                outline_color: (255,255,255)
+                outline_width: 2
+ 
+            Button:
+                id: sub_item2
+                text:'-'
+                on_press: root.sub2()
+
+        BoxLayout:
+            orientation:'vertical'
+            padding: 10
+            spacing: 20
+
+            Label:
+                id: Sum
+                text: '0'
+                font_size: 50
+                pos_hint: {'center_x': 0.5}
+                size_hint: (0.7, 0.5)
+                background_color: (255, 255, 255, 0.2)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color:(0, 1, 0, 1)
+                bold: True
+                outline_color: (255,255,255)
+                outline_width: 2
+            
+            Button:
+                id: re_Sum
+                text:'Reset'
+                background_normal: 'Red'
+                background_color: (255/255, 220/255, 41/255, 1)
+                pos_hint: {'center_x': 0.5}
+                size_hint: (0.5, 0.3)
+                on_press: root.reset()
+
+    
+            
+
+
+
+
+        
+
+    
