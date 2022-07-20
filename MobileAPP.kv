@@ -23,16 +23,15 @@
                 allow_stretch: True
                 keep_ratio: False
                 
-            
         GridLayout:
             cols: 3
             spacing: 10
             padding: 10
 
             Button:
-                id: add_item1
-                text:'+'
-                on_press: root.add1()
+                id: sub_item1
+                text:'-'
+                on_press: root.sub1()
                 
             Label:
                 id: Item1
@@ -50,16 +49,15 @@
                 outline_color: (255,255,255)
                 outline_width: 2
                 
+            Button:
+                id: add_item1
+                text:'+'
+                on_press: root.add1()
             
             Button:
-                id: sub_item1
+                id: sub_item2
                 text:'-'
-                on_press: root.sub1()
-
-            Button:
-                id: add_item2
-                text:'+'
-                on_press: root.add2()
+                on_press: root.sub2()
 
             Label:
                 id: Item2
@@ -76,11 +74,10 @@
                 bold: True
                 outline_color: (255,255,255)
                 outline_width: 2
- 
             Button:
-                id: sub_item2
-                text:'-'
-                on_press: root.sub2()
+                id: add_item2
+                text:'+'
+                on_press: root.add2()
 
         BoxLayout:
             orientation:'vertical'
